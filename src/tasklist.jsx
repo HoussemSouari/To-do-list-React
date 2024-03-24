@@ -1,32 +1,3 @@
-/* import React from 'react';
- 
-
-const TaskList = ({tasks, onToggleComplete}) => {
-
-    const handToggleComplete = (taskID) => { 
-        onToggleComplete(taskID);
-    };
-
-    const deleteTask = (taskId) => {
-        setTasks(tasks.filter(task => task.id !== taskId));
-      };
-
-    return (
-        <ul>
-            {tasks.map(task =>(
-                <li key={task.id} style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
-                onClick={() => handToggleComplete(task.id)}>
-                    {task.name}
-                <button>Mark as done</button>
-                </li>
-            ))}
-        </ul>
-    );
-};
-
-export default TaskList; */
-
-// TaskList.js
 
 import React from 'react';
 
@@ -39,12 +10,6 @@ const TaskList = ({ tasks, onAddTask, onDeleteTask, onToggleComplete }) => {
     onToggleComplete(taskId);
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      onAddTask(e.target.value);
-      e.target.value = '';
-    }
-  };
 
   return (
     <div>
